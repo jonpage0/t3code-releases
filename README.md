@@ -1,6 +1,6 @@
-# T3 Code · personal nightlies
+# T9 Code
 
-Jon Page’s personal fork of [T3 Code](https://github.com/pingdotgg/t3code), following upstream desktop nightlies with a small set of workflow changes.
+A workflow-focused fork of [T3 Code](https://github.com/pingdotgg/t3code), following upstream desktop nightlies with a small set of workflow changes.
 
 **[Download the newest nightly](https://github.com/jonpage0/t3code-releases/releases)** · macOS, Apple Silicon · signed and notarized
 
@@ -19,7 +19,9 @@ Jon Page’s personal fork of [T3 Code](https://github.com/pingdotgg/t3code), fo
 
 1. Open the newest published release and download the **arm64 `.dmg`**.
 2. Drag the app into Applications and open it.
-3. Use the app’s update control for later nightlies; installed fork builds follow this repository’s feed.
+3. Connect your own agent accounts in Providers. Use the app’s update control for later nightlies.
+
+The Mac app currently installs as **T3 Code (Nightly)**. A shareable iPhone TestFlight beta is being prepared; no public iPhone download is available yet.
 
 These are unofficial builds. This repository distributes **Mac binaries and update metadata**; the source and custom iPhone builds are maintained privately. Remote T3 servers use the matching upstream server release.
 
