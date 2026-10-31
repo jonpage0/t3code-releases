@@ -1,14 +1,26 @@
-# T3 Code personal nightlies
+# T3 Code · personal nightlies
 
-This repository hosts release binaries for Jon Page's personal T3 Code fork.
-These are unofficial builds, maintained separately from [T3 Code](https://github.com/pingdotgg/t3code).
+Jon Page’s personal fork of [T3 Code](https://github.com/pingdotgg/t3code), following upstream desktop nightlies with a small set of workflow changes.
 
-The fork's source repository is private. This public repository contains release
-artifacts and updater metadata only. Builds target macOS on Apple Silicon.
+**[Download the newest nightly](https://github.com/jonpage0/t3code-releases/releases)** · macOS, Apple Silicon · signed and notarized
 
-Install the first personal build manually. Subsequent builds use this repository's
-nightly update feed. A draft release is a preparation artifact and is not offered
-by the updater.
+## What’s different
 
-T3 Code is distributed under the MIT license. Its license and bundled dependency
-notices remain part of the application.
+- **Annotations:** select a passage and press **R** to annotate; Agree/Disagree presets, editable comments, and highlights that remain after sending.
+- **Read aloud:** stream responses through xAI speech, choose a voice in settings, and use joined Play/Pause–Stop controls. Keyboard shortcuts control only playback you have already started.
+- **Model controls:** favorite-model and speed-tier cycling, reasoning-effort shortcuts, and compact model badges.
+- **Mobile picker:** favorites first, an opaque bottom control section, and distinct effort and speed icons.
+- **Mobile dictation:** swipe to dictate or send, optional microphone hiding, and on-device Parakeet transcription.
+- **Controllers:** configurable gamepad controls, held dictation, portrait lock, and a landscape workspace.
+- **Organization:** project grouping and pull-to-reveal filters on mobile; streamlined inline annotation editing.
+- **Provider compatibility:** Codex speed tiers with managed ChatGPT sign-in and an optional Antigravity Argon compatibility helper.
+
+## Install and update
+
+1. Open the newest published release and download the **arm64 `.dmg`**.
+2. Drag the app into Applications and open it.
+3. Use the app’s update control for later nightlies; installed fork builds follow this repository’s feed.
+
+These are unofficial builds. This repository distributes **Mac binaries and update metadata**; the source and custom iPhone builds are maintained privately. Remote T3 servers use the matching upstream server release.
+
+T3 Code is MIT-licensed. The app includes its license and dependency notices.
