@@ -6,8 +6,9 @@ A workflow-focused fork of [T3 Code](https://github.com/pingdotgg/t3code), follo
 
 ## What’s different
 
-- **Annotations:** select a passage and press **R** to annotate; Agree/Disagree presets, editable comments, and highlights that remain after sending.
-- **Read aloud:** stream responses through xAI speech, choose a voice in settings, and use joined Play/Pause–Stop controls. Keyboard shortcuts control only playback you have already started.
+- **Annotations (web/desktop):** select a passage and press **R** to annotate, or use Agree/Disagree presets. Click sent highlights to read saved notes; the floating details card separates editable Current drafts from read-only Sent history.
+- **Manual folders:** create, rename and reorder sidebar folders, then move threads into them explicitly. New threads stay unfiled until moved; there is no automatic filing.
+- **Read aloud:** stream responses through xAI speech, choose a voice in server settings, and use joined icon-only Play/Pause–Stop controls. Keyboard shortcuts control only playback you have already started.
 - **Model controls:** favorite-model and speed-tier cycling, reasoning-effort shortcuts, and compact model badges.
 - **Mobile picker:** favorites first, an opaque bottom control section, and distinct effort and speed icons.
 - **Mobile dictation:** swipe to dictate or send, optional microphone hiding, and on-device Parakeet transcription.
