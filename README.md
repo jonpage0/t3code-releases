@@ -156,7 +156,6 @@ Changes on the server, so every client gets them.
 
 - **Codex speed tiers with T3-managed ChatGPT sign-in.** The picker shows the tiers your account offers, such as Fast, and uses the chosen one for turns and text generation.
 - **Opus 5.5 starts at Extra High effort** unless you choose another level.
-- **Accurate Claude update checks.** Native Claude installs are compared with Claude's own release feed, so a current install no longer says it needs an update.
 - **Quotes survive a provider switch.** Quoted passages and their comments carry over in full when a thread changes provider.
 - **Remote servers stay on upstream.** The fork publishes no server builds, so remote and SSH servers update to the upstream nightly your Mac build is based on, and count as current there.
 
