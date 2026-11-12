@@ -26,6 +26,7 @@ Everything upstream T3 Code does, plus:
 | [Game controller](#game-controller)           | Run sessions from a gamepad, dictation included       | iPhone      |
 | [Model controls](#model-controls)             | Favorites-first picker, one-glyph badges, cycle keys  | iPhone, Mac |
 | [Finding threads](#finding-threads)           | Group by status or project, open details from a title | iPhone      |
+| [Extra folders](#extra-folders)              | Find files from additional folders in composer search | Everywhere |
 | [Provider fixes](#server-and-providers)       | Codex tiers with managed sign-in, Opus at Extra High  | Server      |
 | [Nightly Mac builds](#how-builds-are-made)    | Signed, notarized, rebuilt on upstream nightlies      | Mac         |
 
@@ -136,6 +137,12 @@ Select text in a reply and press <kbd>R</kbd> to annotate it, or choose **Agree*
 - Quotes stay highlighted: bright yellow in your draft, lighter once sent. Click one to read what you wrote.
 - The thread details card lists your current drafts and, folded beneath them, everything already sent.
 - Rebind Annotate, Agree and Disagree in **Settings → Keybindings**.
+
+### Extra folders
+
+Add up to eight folders in **Settings → Projects → a project → Extra folders** on Mac or web. Their files then appear in the composer’s `@` search on Mac, web and iPhone, including threads running in worktrees.
+
+This expands file search and mentions. Changed files, diffs and rewind still apply to the thread’s workspace.
 
 ### Keyboard
 
