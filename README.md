@@ -4,7 +4,7 @@
 
 **A phone-first fork of [T3 Code](https://github.com/pingdotgg/t3code).**
 
-Dictate to your agents instead of typing, annotate their answers, listen to replies with text-to-speech and steer a session from a game controller. The Mac app follows upstream's nightly builds.
+Dictate to your agents instead of typing, annotate their answers, listen to replies with text-to-speech and follow work through inline progress cards. The Mac app follows upstream's nightly builds.
 
 **[Download for Mac](https://github.com/jonpage0/t3code-releases/releases)**&emsp;[See what's different](#at-a-glance)
 
@@ -22,30 +22,30 @@ Everything upstream T3 Code does, plus:
 | --------------------------------------------- | ----------------------------------------------------- | ----------- |
 | [Swipe to dictate](#swipe-to-dictate)         | Swipe left to dictate, pull until it's green to send  | iPhone      |
 | [Enhanced annotations](#enhanced-annotations) | Pin comments to passages and send them with a reply   | Everywhere  |
-| [TTS responses](#tts-responses)               | Hear any finished reply in one of five voices         | Everywhere  |
-| [Game controller](#game-controller)           | Run sessions from a gamepad, dictation included       | iPhone      |
+| [TTS responses](#tts-responses)               | Hear replies with ElevenLabs and custom rewrite guidance         | Everywhere  |
 | [Model controls](#model-controls)             | Favorites-first picker, one-glyph badges, cycle keys  | iPhone, Mac |
 | [Finding threads](#finding-threads)           | Group by status or project, open details from a title | iPhone      |
+| [Follow-along cards](#follow-along-cards) | Read named steps, status and results inline | Everywhere |
 | [Extra folders](#extra-folders)              | Find files from additional folders in composer search | Everywhere |
 | [Provider fixes](#server-and-providers)       | Codex tiers with managed sign-in, Opus at Extra High  | Server      |
 | [Nightly Mac builds](#how-builds-are-made)    | Signed, notarized, rebuilt on upstream nightlies      | Mac         |
 
 ## On iPhone
 
-Run a session with the keyboard down: dictate, annotate, listen, or pick up a controller.
+Run a session with the keyboard down: dictate, annotate, listen, and follow its progress.
 
 ### Swipe to dictate
 
 Swipe left across a thread to start dictating into the draft, and swipe again to stop. A disc under the Git button shows what letting go will do: blue starts dictation, red stops one that's recording, and green sends. Pull until it turns green, marked by a firm tap, and letting go sends the message as soon as the transcript is ready. Ease back and it only dictates.
 
 <p align="center">
-  <img src=".github/readme/phone-swipe-dictate-light.png" width="240" alt="A thread in light mode washed blue from the right edge, with a blue microphone disc under the Git button: a short swipe left starts dictation">&nbsp;&nbsp;<img src=".github/readme/phone-microphone-settings.png" width="240" alt="Microphone settings: Apple or Parakeet on device, Swipe left to dictate switched on, Pull to send set to Medium, and Hide microphone button">
+  <img src=".github/readme/phone-swipe-dictate-light.png" width="240" alt="A thread in light mode washed blue from the right edge, with a blue microphone disc under the Git button: a short swipe left starts dictation">
 </p>
 
-- Turn it on in **Settings → Microphone**; it's off by default. Once you're used to it, you can hide the microphone button.
+- Turn swipe dictation on in **Settings → Swipe actions**. Configure its transcription method in **Settings → Voice**.
 - **Pull to send** sets how far that is: Short, Medium (the default), Long, or Off for a swipe that only dictates.
 - While you're writing a note, the swipe dictates into the note. The message box shows its recording bar, labelled **Dictating into note**, and the cursor waits after the new text.
-- Choose Apple dictation or **Parakeet on device**. Parakeet is a one-time download of about 632 MB, and audio never leaves the phone.
+- Dictation follows upstream: Apple on the phone, a paired environment, or cloud.
 - Code blocks and tables that can still scroll keep scrolling, so a swipe across them doesn't start dictation.
 
 ### Enhanced annotations
@@ -57,38 +57,22 @@ Select a passage in a reply and choose **Annotate**. Your comment is pinned to t
 </p>
 
 - Tap a highlighted passage to reopen its note.
-- A notes pill in the floating row above the composer, beside the working status, opens a sheet where you can edit or remove each note, or jump back to its passage.
+- Review pending notes before sending, edit or remove them, or return to their passages.
 - Notes can go out on their own, without a message. The reply itself is never changed.
 
 ### TTS responses
 
-Every finished reply has Play and Stop at the end of its action row. The text goes straight to xAI speech, with no rewrite and no extra agent turn, and starts playing while it's still being generated.
+Use Play beneath a completed reply to hear it with ElevenLabs. **Settings → TTS** groups the key, voice, synthesis model, speed, and optional rewrite for listening on Mac/web and iPhone.
 
-<p align="center">
-  <img src=".github/readme/phone-speech-controls.png" width="240" alt="A finished reply with Play and Stop at the right end of its action row">&nbsp;&nbsp;<img src=".github/readme/phone-speech-voices.png" width="240" alt="The Speech voice sheet listing Eve, Ara, Leo, Rex and Sal, each with a short description">
-</p>
+- Pick a voice from your ElevenLabs account, preview it, and choose a speed from 0.7× to 1.2×.
+- **Rewrite for listening** turns formatting, code, tables and long paths into spoken prose. Choose its model and add **Custom instructions**, such as preferred pronunciation. Blank instructions preserve the defaults; **Use defaults** clears them.
+- Speech runs on one connected environment, identified on the settings page. Its API key stays on that server.
+- iPhone queues narration for lock-screen/background playback. Play/pause and Stop shortcuts control narration you already started; playback never automatically starts another response.
+- On iPhone, when no server has an ElevenLabs key, Read aloud can hand the text to ElevenReader instead.
 
-- Five voices (Eve, Ara, Leo, Rex and Sal) and speeds from 0.7× to 1.5×, saved per server.
-- Needs an xAI API key on the server. Add it in **Settings → Threads** on the phone or **Settings → General** on the Mac, or export `XAI_API_KEY`. The key never leaves the server.
-- The same controls appear on Mac and web, where <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>P</kbd> pauses and resumes and adding <kbd>Shift</kbd> stops.
-- Playback runs in the foreground, one reply at a time.
+### Follow-along cards
 
-### Game controller
-
-Pair a gamepad and the phone becomes a remote for your agents. The shoulder buttons switch sessions, the D-pad moves focus and Options sends. Hold the right trigger to dictate into the composer, a note or an answer to an agent's question; letting go transcribes but never sends.
-
-<p align="center">
-  <img src=".github/readme/phone-controller-landscape.png" width="560" alt="The landscape controller workspace with the session sidebar, compact header and tools rail">
-</p>
-
-<p align="center">
-  <img src=".github/readme/phone-controller-settings.png" width="240" alt="Game controller settings with the Generic gamepad preset and its button mappings">
-</p>
-
-- Presets for the ohsnap! MCON and generic gamepads. Remap any button, or add shoulder chords, in **Settings → Game controller**.
-- Rotate the phone for a landscape workspace with a session sidebar and a Terminal, Files and Git rail. Or lock the phone to portrait.
-- Approval and question cards work from the controller. Send and Stop need a fresh press and never repeat.
-- **Test inputs** shows what each button does without sending, approving or running anything.
+An agent using the follow-along format can put a named run, its steps, what it is doing, and what it needs from you in a `run-card` block. T9 renders that block as an inline card on web and iPhone. Cards support streaming, thread find, copying, and spoken playback. Unrecognized or invalid blocks remain ordinary code.
 
 ### Model controls
 
@@ -103,14 +87,13 @@ The model sheet opens on your favorites, with provider, effort and speed control
 
 ### Finding threads
 
-Group the thread list by status or by project. Fold the projects you're not working in and drag the rest into your own order.
+Group the thread list by status or by project. Fold the projects you're not working in and drag the rest into your own order. Thread headers and the inspector follow upstream.
 
 <p align="center">
-  <img src=".github/readme/phone-thread-list.png" width="240" alt="The thread list grouped by project, with one project folded and two expanded to show their threads">&nbsp;&nbsp;<img src=".github/readme/phone-thread-details.png" width="240" alt="The compact thread details panel opened from the title: project, environment, workspace and branch as label-and-value rows, then shortcuts to files, terminal, Git, agents and thread settings">
+  <img src=".github/readme/phone-thread-list.png" width="240" alt="The thread list grouped by project, with one project folded and two expanded to show their threads">
 </p>
 
 - The environment, project and grouping filters stay hidden until you pull down past the top.
-- Tap a thread's title for a compact panel with its project, environment, workspace and branch, and shortcuts to files, terminal, Git, agents and settings.
 - On a hardware keyboard, <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>[</kbd> and <kbd>]</kbd> switch sessions, and <kbd>Ctrl</kbd>+<kbd>Tab</kbd> returns to the last one.
 
 ## On Mac and the web
@@ -148,14 +131,14 @@ This expands file search and mentions. Changed files, diffs and rewind still app
 
 | Keys                                                           | Does                   |
 | -------------------------------------------------------------- | ---------------------- |
-| <kbd>Hyper</kbd>+<kbd>,</kbd>                                  | Next favorite model    |
-| <kbd>Hyper</kbd>+<kbd>/</kbd>                                  | Next speed tier        |
+| <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>M</kbd>                                  | Next favorite model    |
+| <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>S</kbd>                                  | Next speed tier        |
 | <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>E</kbd>                  | Raise reasoning effort |
 | <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>P</kbd>                  | Pause or resume speech |
 | <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> | Stop speech            |
 | <kbd>R</kbd> with text selected                                | Annotate the selection |
 
-<kbd>Hyper</kbd> is <kbd>Cmd</kbd>+<kbd>Ctrl</kbd>+<kbd>Option</kbd>+<kbd>Shift</kbd>. Off the Mac, read <kbd>Cmd</kbd> as <kbd>Ctrl</kbd>. Holding a combination doesn't repeat it. Change any of these in **Settings → Keybindings**.
+Off the Mac, read <kbd>Cmd</kbd> as <kbd>Ctrl</kbd>. Holding a combination doesn't repeat it. Change any of these in **Settings → Keybindings**.
 
 ## Server and providers
 
