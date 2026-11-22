@@ -4,9 +4,9 @@
 
 **A phone-first fork of [T3 Code](https://github.com/pingdotgg/t3code).**
 
-Dictate to your agents instead of typing, annotate their answers, listen to replies with text-to-speech and follow work through inline progress cards. The Mac app follows upstream's nightly builds.
+Dictate to your agents instead of typing, annotate their answers, listen to replies with text-to-speech and follow work through inline progress cards. The Mac and Linux desktop apps follow upstream’s nightly builds.
 
-**[Download for Mac](https://github.com/jonpage0/t3code-releases/releases)**&emsp;[See what's different](#at-a-glance)
+**[Download for Mac or Linux x64](https://github.com/jonpage0/t3code-releases/releases)**&emsp;[See what's different](#at-a-glance)
 
 <img src=".github/readme/phone-swipe-send.png" width="240" alt="A thread washed green from the right edge, with a green send-arrow disc under the Git button: letting go of this swipe sends the reply">&nbsp;&nbsp;<img src=".github/readme/phone-note-inline.png" width="240" alt="A note being written on the word 'sum' in an assistant reply, with Remove and Save, and a pill counting one pending note above the composer">
 
@@ -29,7 +29,7 @@ Everything upstream T3 Code does, plus:
 | [Extra folders](#extra-folders)              | Find files from additional folders in composer search | Everywhere |
 | [Provider fixes](#server-and-providers)       | Codex tiers with managed sign-in, Opus at Extra High  | Server      |
 | [Discord investigations](#discord-investigations) | Ask about a project from a bound Discord channel | Mac host    |
-| [Nightly Mac builds](#how-builds-are-made)    | Signed, notarized, rebuilt on upstream nightlies      | Mac         |
+| [Desktop nightly builds](#how-builds-are-made) | Apple Silicon DMG and Linux x64 AppImage | Mac, Linux |
 
 ## On iPhone
 
@@ -164,6 +164,10 @@ Changes on the server, so every client gets them.
 
 A fork version is the upstream build number × 1000 + n, so `0.1.7-nightly.20261102.4080002` is the second fork build on upstream nightly 4080. Native passkeys are off in these builds; browser sign-in works.
 
+### Linux x64
+
+Download the **AppImage** from the Linux x64 link in the [release notes](https://github.com/jonpage0/t3code-releases/releases). Make the file executable with `chmod +x`, then open it. The desktop app uses the fork’s nightly update feed.
+
 ### iPhone
 
 The iPhone app is in a small, invited TestFlight beta and updates over the air between builds. There is no public iPhone download or App Store release yet.
@@ -173,10 +177,10 @@ The iPhone app is in a small, invited TestFlight beta and updates over the air b
 
 ## How builds are made
 
-Releases are cut by hand when upstream publishes a new nightly. The nightly is merged into the fork, the fork's checks and its own tests run against it, and the Mac app is then built, signed, notarized and published here. A failed check stops the release before anything is published.
+Releases are cut by hand when upstream publishes a new nightly. The nightly is merged into the fork, the fork's checks and its own tests run against it, the Mac app is signed and notarized, and the Linux x64 AppImage passes a desktop launch test. Both downloads are published here. A failed check stops the release before anything is published.
 
 - Release notes keep upstream's highlights and fixes, and link back to this page.
-- This repository holds only Mac installers, update metadata and checksums. The fork's source and the iPhone builds are maintained privately.
+- This repository holds desktop installers for Mac and Linux x64, update metadata and checksums. The fork's source and the iPhone builds are maintained privately.
 
 ## Credit and license
 
