@@ -28,6 +28,7 @@ Everything upstream T3 Code does, plus:
 | [Follow-along cards](#follow-along-cards) | Read named steps, status and results inline | Everywhere |
 | [Extra folders](#extra-folders)              | Find files from additional folders in composer search | Everywhere |
 | [Provider fixes](#server-and-providers)       | Codex tiers with managed sign-in, Opus at Extra High  | Server      |
+| [Discord investigations](#discord-investigations) | Ask about a project from a bound Discord channel | Mac host    |
 | [Nightly Mac builds](#how-builds-are-made)    | Signed, notarized, rebuilt on upstream nightlies      | Mac         |
 
 ## On iPhone
@@ -139,6 +140,10 @@ This expands file search and mentions. Changed files, diffs and rewind still app
 | <kbd>R</kbd> with text selected                                | Annotate the selection |
 
 Off the Mac, read <kbd>Cmd</kbd> as <kbd>Ctrl</kbd>. Holding a combination doesn't repeat it. Change any of these in **Settings → Keybindings**.
+
+## Discord investigations
+
+Open **Settings → Discord** on the Mac, set up the bot, and use `/t3 bind` in Discord to choose a project. In **Bound channels**, enable **Member investigations** if anyone in the channel should be able to ask a question directly. Enable **Watcher investigations** if the bot should also start a supervised investigation when a conversation needs project data. Both settings start off. Shadow mode lets you review what the watcher would investigate.
 
 ## Server and providers
 
